@@ -97,7 +97,7 @@ UniAMAX <- function(sample_data, significance_level){
   } else {
     result <- "Do not reject null hypothesis"
   }
-  return(paste("AUnimax Critical value:", quantile_value, "; AUnimax Test statistic:", Aunimax, "; Result:", result))
+  return(paste("UniAMAX Critical value:", quantile_value, "; UniAMAX Test statistic:", Aunimax, "; Result:", result))
 }
 
 
