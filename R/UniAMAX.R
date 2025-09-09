@@ -13,8 +13,8 @@
 UniAMAX <- function(sample_data, significance_level, peak){
   # Check peak validity
   if (peak == 1 || peak == length(sample_data)) {
-    stop("Error: 'peak' must be > 1 and < length(sample_data).")
-  }
+  stop(paste("Error: 'peak' must be greater than 1 and less than", length(sample_data), "."))
+}
   set.seed(456)
   sample_data <- lapply(sample_data, function(x) x[!is.na(x)])
   num_samples = 100000
@@ -103,6 +103,7 @@ UniAMAX <- function(sample_data, significance_level, peak){
   }
   return(paste("UniAMAX Critical value:", quantile_value, "; UniAMAX Test statistic:", Aunimax, "; Result:", result))
 }
+
 
 
 
